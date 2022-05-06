@@ -2,12 +2,34 @@
 
 body {
     font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.75px;
+}
+
+h1,h2,h3,h4 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 3.157rem;
+}
+
+h2 {
+    font-size: 1.777rem;
+}
+
+h3 {
+    font-size: 1.333rem;
 }
 
 /* Spacing */
 
 body {
     margin: 0 auto;
+}
+
+a {
+    margin-bottom: 2rem;
 }
 
 .main {
@@ -17,7 +39,7 @@ body {
 }
 
 .main-item {
-    margin-bottom: 2rem;
+    margin: 0 2rem 2rem 0;
 }
 
 .header {
@@ -26,7 +48,6 @@ body {
     height: 75vh;
     justify-content: center;
     text-align: center;
-    margin-bottom: 5rem;
 }
 
 .header-content {
@@ -40,6 +61,10 @@ img {
     height: auto;
 }
 
+i {
+    margin-right: 8px;
+}
+
 .row {
     padding: 4rem 0;
 }
@@ -50,14 +75,38 @@ ul, ol {
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    padding: 4rem 0;
-    align-items: center;
+    padding: 2rem 2rem 4rem;
+}
+
+footer h4 {
+    margin-top: 0;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
 }
 
 /* Styling */
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .header {
-    background-image: url("https://images.hdqwalls.com/wallpapers/nier-automata-world-collapsing-4k-ke.jpg");
+    background: linear-gradient(to right, rgba(40, 40, 40, 0.7), rgba(40, 40, 40, 0.7)), url("https://images.unsplash.com/photo-1551708919-5b50c2aceffa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2831&q=80");
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -68,26 +117,14 @@ footer {
     color: #fff;
 }
 
-button {
-    padding: 1rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    background-color: #191919;
-    color: #fff;
-}
-
-button:hover {
+footer {
     background-color: #424242;
+    color: #fff;
 }
 
 /* Responsiveness */
 
 @media screen and (min-width: 600px) {
-    .main {
-        align-items: initial;
-        text-align: left;
-    }
-
     .main-item {
         align-self: center;
     }
@@ -95,6 +132,7 @@ button:hover {
     .row {
         display: flex;
         justify-content: space-around;
+        padding: 2rem 1rem;
     }
 
     .row-reverse {
@@ -106,7 +144,8 @@ button:hover {
         width: auto;
     }
 
-    .about-me {
-        margin-right: 2rem;
+    footer {
+        justify-content: space-around;
+        padding: 3rem;
     }
   }
